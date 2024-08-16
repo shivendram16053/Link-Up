@@ -2,13 +2,21 @@
 @tailwind components;
 @tailwind utilities;
 
-@layer utilities{
-  .flex-center{
-    @apply flex justify-center items-center
+@layer utilities {
+  .flex-center {
+    @apply flex justify-center items-center;
   }
 
-  .flex-between{
-    @apply flex justify-between items-center
+  .flex-between {
+    @apply flex justify-between items-center;
+  }
+
+  .bg-background {
+    background-color: var(--background);
+  }
+
+  .text-foreground {
+    color: var(--foreground);
   }
 }
 
@@ -67,13 +75,62 @@
     --chart-4: 280 65% 60%;
     --chart-5: 340 75% 55%;
   }
-}
 
-@layer base {
-  * {
-    @apply border-border;
-  }
   body {
     @apply bg-background text-foreground;
   }
+}
+
+/* Additional Custom Classes */
+.cl-userButtonPopoverActionButton {
+  color: white;
+}
+
+.cl-logoBox {
+  height: 40px;
+}
+
+.cl-dividerLine {
+  background: #252a41;
+  height: 2px;
+}
+
+.cl-socialButtonsIconButton {
+  border: 3px solid #565761;
+}
+
+.cl-internal-wkkub3 {
+  color: white;
+}
+
+.cl-internal-1j7ahlv {
+  height: 50px;
+  width: 50px;
+}
+
+.cl-userButtonPopoverActionButton {
+  color: white;
+}
+
+.cl-userButtonPopoverActionButton:hover {
+  color: gray;
+}
+
+.glassmorphism{
+  background: rgba(255,255,255,0.25) ;
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+}
+
+.glassmorphism2{
+  background: rgba(18,17,17,0.25) ;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+
+.cl-badge{
+  color: rgb(54, 255, 4);
+}
+.cl-navbarButton{
+  color: white;
 }

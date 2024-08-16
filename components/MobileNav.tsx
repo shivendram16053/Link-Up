@@ -4,9 +4,6 @@ import React from "react";
 import {
   Sheet,
   SheetContent,
-  SheetDescription,
-  SheetHeader,
-  SheetTitle,
   SheetTrigger,
   SheetClose,
 } from "@/components/ui/sheet";
@@ -50,10 +47,9 @@ const MobileNav = () => {
                 {sidebarLinks.map((link) => {
                   const isActive = pathname === link.route;
                   return (
-                    <SheetClose asChild>
+                    <SheetClose asChild key={link.label}>
                       <Link
                         href={link.route}
-                        key={link.label}
                         className={cn(
                           "flex gap-4 items-center p-4 rounded-lg w-full",
                           {
