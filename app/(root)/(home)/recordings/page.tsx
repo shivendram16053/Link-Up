@@ -1,4 +1,5 @@
 import React from 'react'
+import CallList from '../../../../components/CallList'
 
 const RecordingPage = () => {
   return (
@@ -6,6 +7,8 @@ const RecordingPage = () => {
       <h1 className="text-3xl font-bold">
         Meet Recordings
       </h1>
+
+      <CallList type='recordings'/>
     </section>
   )
 }

@@ -12,6 +12,7 @@ import { LayoutList, Users } from "lucide-react";
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuSeparator, DropdownMenuTrigger } from "@/components/ui/dropdown-menu";
 import Loader from "./Loader";
 
+
 type CallLayoutType = "grid" | "speaker-left" | "speaker-right";
 
 const MeetingRoom = () => {
@@ -22,12 +23,7 @@ const MeetingRoom = () => {
   const [layout, setLayout] = useState<CallLayoutType>("grid");
   const [showParticipants, setShowParticipants] = useState(false);
 
-  // Redirect to home page if the user has left the call
-  useEffect(() => {
-    if (callingState === CallingState.LEFT || callingState === CallingState.OFFLINE) {
-      router.push("/"); // Redirect to the homepage or another desired page
-    }
-  }, [callingState, router]);
+  
 
   if (callingState !== CallingState.JOINED) return <Loader />;
 
@@ -58,7 +54,7 @@ const MeetingRoom = () => {
       </div>
 
       <div className="fixed bottom-0 flex w-full items-center justify-center gap-5 flex-wrap">
-        <CallControls />
+        <CallControls onLeave={()=>router.push('/')}/>
 
         <DropdownMenu>
           <div className="flex items-center">

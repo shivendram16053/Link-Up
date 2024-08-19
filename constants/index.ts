@@ -10,7 +10,7 @@ const sidebarLinks =[
         label:'Upcoming',
     },
     {
-        imgUrl :'/icons/home.svg',
+        imgUrl :'/icons/previous.svg',
         route:'/previous',
         label:'Previous',
     },
