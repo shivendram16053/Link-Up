@@ -65,7 +65,7 @@ const CallList = ({ type }: { type: "ended" | "upcoming" | "recordings" }) => {
   if (isLoading) return <Loader/>;
 
   return (
-    <div className="grid grid-cols-1 gap-5 xl:grid-cols-2">
+    <div className="grid grid-cols-1 gap-5 xl:grid-cols-3">
       {calls && calls.length > 0 ? (
         calls.map((meeting: Call | CallRecording) => (
           <MeetingCard
@@ -83,17 +83,14 @@ const CallList = ({ type }: { type: "ended" | "upcoming" | "recordings" }) => {
               "Personal Meeting"
             }
             date={
-              (meeting as Call)?.state?.startsAt?.toLocaleString('en-US', { hour: '2-digit', minute: '2-digit' }) ||
+              (meeting as Call)?.state?.startsAt?.toLocaleString() ||
               new Date((meeting as CallRecording)?.start_time).toLocaleDateString('en-US', {
                 weekday: 'long',
                 year: 'numeric',
                 month: 'long',
                 day: 'numeric',
               }) + ' ' +
-              new Date((meeting as CallRecording)?.start_time).toLocaleTimeString('en-US', {
-                hour: '2-digit',
-                minute: '2-digit',
-              })
+              new Date((meeting as CallRecording)?.start_time).toLocaleTimeString()
             }
             
             isPreviousMeeting={type === "ended"}

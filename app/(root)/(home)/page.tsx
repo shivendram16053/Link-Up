@@ -1,5 +1,6 @@
 import React from 'react'
 import MeetingTypeList from '../../../components/MeetingTypeList';
+import CallList from '../../../components/CallList';
 
 const Page = () => {
   const now=new Date();
@@ -10,7 +11,7 @@ const Page = () => {
 
   return (
     <section className='flex size-full flex-col gap-5 text-white'>
-      <div className="w-full h-[200px] rounded-[20px] bg-hero bg-cover">
+      <div className="w-full h-[300px] rounded-[20px] bg-hero bg-cover">
         <div className="flex h-full flex-col justify-around gap-5 max-md:px-5 max-md:py-8 lg:p-11 ">
           <h2 className='glassmorphism max-w-[250px] mt-[-20px] rounded  text-center text-base font-normal'>Upcoming Meeting At : 12:30PM</h2>
           <div className='flex flex-col gap-2  pt-5'>
@@ -26,6 +27,11 @@ const Page = () => {
       </div>
 
         <MeetingTypeList/>
+
+        <h1 className='text-2xl mt-10 font-extrabold lg:text-3xl'>
+          Upcoming Meets
+        </h1>
+        <CallList type="upcoming" />
 
     </section>
   )

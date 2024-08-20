@@ -20,27 +20,15 @@ const config = {
     extend: {
       colors: {
         dark: {
-          1: "#1c1f2e",
-          2: "#161925",
+          1: "#262526",
+          2: "#1c1c1c",
         },
         blue: {
-          1: "#0e78f9",
-        },
-        sky:{
-          1:"#c9ddff",
-        },
-        orange:{
-          1:"#ff742e",
-        },
-        purple:{
-          1:"#830ef9",
-        },
-        yellow:{
-          1:"#f9a90e",
-        },
+          1: "#2c2d40",
+        }
       },
       backgroundImage:{
-        hero:"url('/images/hero-background.png')"
+        hero:"url('/images/hero-background.jpg')"
       },
       keyframes: {
         "accordion-down": {
